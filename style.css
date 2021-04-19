@@ -6,6 +6,16 @@ div h1{
     background-repeat: cover;
     text-align: center;
 }
-#runaway-container{
+body{
+    background-image: url("usabackground.jpeg");
+    background-attachment: fixed;
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
+}
+
+
+div{
+    padding: 4px;
 
 }
+

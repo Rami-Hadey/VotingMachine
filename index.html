@@ -14,7 +14,13 @@
 <body>
 
     <div>
-        <h1>Voting time</h1>
+        <div class="progress">
+            <div id="myBar" class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Nixon</div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">McGovern</div>       
+        </div>
+
+
+        
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -36,7 +42,10 @@
                                     <p class="card-title">George McGovern</p>
                                     <p class="card-text">Vote for me pls</p>
                                 </div>
-                                <button class="btn btn-primary" onclick="enlargeImg()">Vote</button>
+                                <div id="mcgovern1button">
+                                    <button class="btn btn-primary" onclick="enlargeImg()" >Vote</button>
+                                </div>
+                                
                             </div>
                     </div>
                 </div>
