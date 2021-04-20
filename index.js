@@ -1,4 +1,53 @@
 
+let voting = document.getElementById("voting");
+
+function appear(){
+    if(document.getElementById("voting").style.opacity = "0%"){
+        document.getElementById("voting").style.opacity = "100%"
+    }
+   
+};
+//Voting bar
+let voteCount = {
+    nixon: 60,
+    mcgovern: 40,
+    nixonVote(){
+        if(this.nixon >= 100){
+            this.nixon = 100;
+        }else{
+            this.nixon++;
+            this.mcgovern--;
+        }
+        
+    },
+    mcgovernVote(){
+        this.nixon = 100;
+        this.mcgovern = 0;
+    },
+    updateVote(){
+        document.getElementById("nixonBar").style.width = this.nixon + "%";
+        document.getElementById("nixonBar").innerHTML = + this.nixon + "% Nixon";
+        document.getElementById("mcgovernBar").style.width = this.mcgovern + "%";
+        document.getElementById("mcgovernBar").innerHTML = + this.mcgovern + "% Mcgovern";
+    }
+}
+
+function correctVote(){
+    voteCount.nixonVote();
+    voteCount.updateVote();
+}
+
+
+
+//Animates Nixon
+function animateNixon(){
+    document.getElementById("nixonPic").src='NixonVid.mp4';
+}
+
+
+
+
+
 
 
 
@@ -84,15 +133,17 @@ let mcgovernPic = document.getElementById("mcgovernPic");
                 
                 // mcgovernInfo.remove();
             }
+
+
             // Function to reset image dimensions
-            function resetImg() {
-                document.getElementById("mcgovern").style.width = "100%";
-                document.getElementById("mcgovern").style.height = "100%";
-                document.getElementById("mcgovernInfo").style.fontSize = "12px";
-                document.getElementById("mcgovern").style.transition = "width 0.5s ease";
-                document.getElementById("mcgovernInfo").style.display = "block";
-                document.getElementById("mcgovernPic").src='mcgovern.jpeg';
-            }
+            // function resetImg() {
+            //     document.getElementById("mcgovern").style.width = "100%";
+            //     document.getElementById("mcgovern").style.height = "100%";
+            //     document.getElementById("mcgovernInfo").style.fontSize = "12px";
+            //     document.getElementById("mcgovern").style.transition = "width 0.5s ease";
+            //     document.getElementById("mcgovernInfo").style.display = "block";
+            //     document.getElementById("mcgovernPic").src='mcgovern.jpeg';
+            // }
 
 
 // function deleteit(){
