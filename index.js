@@ -14,6 +14,8 @@ let voteCount = {
     nixonVote(){
         if(this.nixon >= 100){
             this.nixon = 100;
+            document.getElementById("body").style.backgroundImage= "url('fireworks.gif')";
+            alert("congrats the guy you choice won!")
         }else{
             this.nixon++;
             this.mcgovern--;
@@ -40,12 +42,16 @@ function correctVote(){
 
 
 //Animates Nixon
+document.addEventListener('contextmenu', event => event.preventDefault());
 function animateNixon(){
-    document.getElementById("nixonPic").src='NixonVid.mp4';
+    document.getElementById("nixonPic").src='Nixon.gif';
+    e.preventDefault();
+}false;
+
+
+function animateMcgovern(){
+    document.getElementById("mcgovernPic").src='mcgovern.gif';
 }
-
-
-
 
 
 
@@ -108,12 +114,13 @@ let mcgovernPic = document.getElementById("mcgovernPic");
             // Function to set image dimensions
             function enlargeImg() {
                 stupidButton.init();
-                document.getElementById("mcgovern").style.width = "10%";
-                document.getElementById("mcgovern").style.height = "10%";
+                document.getElementById("mcgovern").style.width = "20%";
+                document.getElementById("mcgovern").style.height = "20%";
                 document.getElementById("mcgovernInfo").style.fontSize = "5px";
                 document.getElementById("mcgovern").style.transition = "width 0.5s ease";
                 document.getElementById("mcgovernInfo").style.display = "none";
-                document.getElementById("mcgovernPic").src='no.png';
+                document.getElementById("mcgovernCard").style.display = "none";
+                document.getElementById("mcgovernPic").src='mcgovern.gif';
                 //mcgovern1button.remove();
 
 
